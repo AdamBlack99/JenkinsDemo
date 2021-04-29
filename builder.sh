@@ -1,0 +1,1 @@
+echo <h1>$1</h1> > build_file
