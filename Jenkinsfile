@@ -8,7 +8,7 @@ pipeline {
     }
     stages {
         stage('Build') {
-            step{
+            steps{
                 script{
                     sh "echo STAGE : BUILD"
                     sh "./builder.sh ${params.TITLE}"
@@ -18,7 +18,7 @@ pipeline {
             
         }
         stage('Test') {
-            step{
+            steps{
                 script{
                     sh "echo STAGE : TESTS"
                     if(${IF_TEST}) {
@@ -33,7 +33,7 @@ pipeline {
 
         }
         stage('Release') {
-            step{
+            steps{
                 script{
                     sh "echo STAGE : RELEASE"
                     sh "mv build_file ${params.TITLE}_${env.BUILD_NUMBER}"
