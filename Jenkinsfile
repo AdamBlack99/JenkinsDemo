@@ -1,6 +1,6 @@
 pipeline {
     agent{
-
+        docker { image 'bash:latest' }
     }
     parameters {
         string(defaultValue: "demo", description: "This will be the title of the html file", name: "TITLE")
