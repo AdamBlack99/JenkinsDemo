@@ -22,7 +22,7 @@ pipeline {
             steps{
                 script{
                     sh "echo STAGE : TESTS"
-                    if(${IF_TEST}) {
+                    if(params.IF_TEST) {
                         sh "echo simulating tests.."
                         sh "sleep 5"
                         sh "echo SUCCESS"
