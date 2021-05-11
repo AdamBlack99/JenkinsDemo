@@ -11,6 +11,7 @@ pipeline {
             steps{
                 script{
                     sh "echo STAGE : BUILD"
+                    sh "chmod 777 ./builder.sh"
                     sh "./builder.sh ${params.TITLE}"
                 }
             }
