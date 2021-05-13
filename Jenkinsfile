@@ -37,8 +37,6 @@ pipeline {
             steps{
                 script{
                     sh "echo STAGE : RELEASE"
-                    sh "${params.TITLE}_${env.BUILD_NUMBER} released"
-                    sh "rm build_file"
                     sh "echo SUCCESS"
                 }
             }
