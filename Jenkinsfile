@@ -38,6 +38,7 @@ pipeline {
                 script{
                     sh "echo STAGE : RELEASE"
                     sh "mv build_file ${params.TITLE}_${env.BUILD_NUMBER}.html"
+                    archiveArtifacts artifacts: "${params.TITLE}_${env.BUILD_NUMBER}.html"
                     sh "echo release : ${params.TITLE}_${env.BUILD_NUMBER}.html"
                     sh "echo SUCCESS"
                 }
